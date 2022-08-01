@@ -1,0 +1,151 @@
+$background: hsl(228, 40%, 22%);
+$button: hsl(44, 91%, 58%);
+$text: white;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: $background;
+    color: white;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#score-card {
+    @extend main;
+    flex-direction: column;
+    font-size: 42px;
+    margin: 18px 0;
+    font-weight: 600;
+}
+
+.message {
+    margin-bottom: 20px;
+    height: 90px;
+}
+
+#message {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    padding: 12px;
+    width: 400px;
+}
+
+#player-info {
+    @extend #message;
+}
+
+#computer-info {
+    @extend #message;
+}
+
+h1 {
+    font-size: 56px;
+    padding: 18px;
+    text-align: center;
+    color: $button;
+    background-color: $background;
+
+}
+
+#computer-score {
+    margin: auto;
+}
+
+#player-score {
+    @extend #computer-score;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+}
+
+#player-moves {
+    display: flex;
+    justify-content: center;
+}
+
+#selections {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#computer-selection {
+    margin: 20px;
+    margin-top: 0;
+}
+
+#player-selection {
+    @extend #computer-selection;
+}
+
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    font-size: 72px;
+    padding: 14px;
+    margin: 18px;
+    border: 2px solid black;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: 800;
+    border: 2px solid hsl(44, 91%, 58%);
+    transform: scale(1.09);
+
+    &:hover {
+        background-color: rgb(47, 60, 108);
+        cursor: pointer;
+    }
+}
+
+#btns {
+    @extend main;
+    margin-top: 34px;
+}
+
+.hide {
+    display: none;
+}
+
+#start-btn {
+    background-color: #cfa42d;
+    border: 3px solid black;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    padding: 0 18px;
+    font-size: 42px;
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+
+    &:hover {
+        transform: scale(1.05);
+        border: 2px solid white;
+        box-shadow: none;
+    }
+}
+
+#restart-btn {
+    @extend #start-btn;
+}
